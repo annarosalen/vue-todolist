@@ -23,12 +23,12 @@
       </section>
 
       <div id="contenitore-lista">
-        <ul >
-          <li v-for="item in lista">
+        <ul>
+          <li v-for="(item,index) in lista">
             <div id="cont-item">
               <input  type="checkbox"/>
               <label> {{item}} </label>
-              <a href="#"> <i class="fa fa-times"></i> </a>
+              <a href="#"> <i class="fa fa-times" @click="rimuovi(item)"></i> </a>
             </div>
           </li>
         </ul>
