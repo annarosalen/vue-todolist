@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/617605346e.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>ToDoList</title>
   </head>
@@ -16,14 +17,20 @@
         </div>
       </nav>
 
-      <div id="contenitore-barra">
-        <input type="text" v-model="todo">
-        <button type="button" name="button">Aggiungi</button>
-      </div>
+      <section>
+          <input type="text" v-model="todo">
+          <button type="button" name="button" @click="aggiungi">Aggiungi</button>
+      </section>
 
       <div id="contenitore-lista">
-        <ul>
-          <li></li>
+        <ul >
+          <li v-for="item in lista">
+            <div id="cont-item">
+              <input  type="checkbox"/>
+              <label> {{item}} </label>
+              <a href="#"> <i class="fa fa-times"></i> </a>
+            </div>
+          </li>
         </ul>
       </div>
 

@@ -4,12 +4,51 @@
   box-sizing: border-box;
 }
 
-body{
+/* body{
   background-image: url(../img/bg.png);
   background-size: cover;
+} */
+
+#app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contenitore-logo img{
+
   height: 100px;
   width: 100px;
+}
+
+section{
+  padding: 40px;
+}
+
+#contenitore-lista{
+  padding-top : 20px;
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+}
+ul{
+  width: 100%;
+}
+
+li{
+  padding-top: 10px;
+  list-style: none;
+  display: flex;
+  align-content: space-between;
+}
+
+#cont-item{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fa-times{
+  color: red;
 }

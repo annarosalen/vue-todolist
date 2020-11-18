@@ -1,7 +1,18 @@
+
+
 var app= new Vue({
   el:"#app",
   data:{
     logo:"img/logo-piccolo.png",
-    todo:""
+    todo:"",
+    lista:[
+
+    ]
+
+  },
+  methods: {
+    aggiungi: function () {
+      this.lista.push(this.todo);
+    }
   }
 });
