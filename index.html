@@ -15,6 +15,7 @@
       <header>
         <div id="contenitore-logo">
           <img :src="logo" alt="">
+          <h1 id="titolo">{{title}}</h1>
         </div>
       </header>
 
@@ -29,8 +30,8 @@
         <ul>
           <li v-for="(item,index) in lista">
             <div id="cont-item">
-              <input type="checkbox" @click="toggleDone"/>
-              <label class="todo" :class= "{done: check}"> {{item}} </label>
+              <input id="checkDone" type="checkbox" @click="toggleDone(item)"/>
+              <label class="todo" :class= "{done: check}" v-bind:key="item.id"> {{item}} </label>
               <a href="#"> <i class="fa fa-times" @click="rimuovi(item)"></i> </a>
             </div>
           </li>

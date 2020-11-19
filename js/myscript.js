@@ -4,15 +4,18 @@ var app= new Vue({
   el:"#app",
   data:{
     logo:"img/logo-grande.png",
+    title: "Your ToDo List",
     newtodo:"",
     lista:[
+
     ],
-    check: ""
+    check: false,
   },
   methods: {
     aggiungi: function () {
       this.lista.push(this.newtodo);
       this.newtodo = "";
+
     },
 
     rimuovi: function(item){
@@ -24,8 +27,8 @@ var app= new Vue({
       this.newtodo = "";
     },
 
-    toggleDone: function(){
-      this.check  = !this.check;
+    toggleDone: function(item){
+      this.check = !this.check;
       // if (this.check==="done") {
       //   this.check = "";
       // }else{
