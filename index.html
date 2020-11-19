@@ -11,17 +11,20 @@
 
     <div id="app">
 
+      <!-- HEADER -->
       <header>
         <div id="contenitore-logo">
           <img :src="logo" alt="">
         </div>
       </header>
 
+      <!-- SEZIONE INPUT -->
       <section>
-          <input type="text" v-model="todo" placeholder="Add New Todo" @keypress.enter="enterTodo">
-          <button type="button" name="button" @click="aggiungi">Aggiungi</button>
+          <input id="inputTodo" type="text" v-model="todo" placeholder="Add New Todo" @keypress.enter="enterTodo">
+          <button id="btn-aggiungi" type="button" name="button" @click="aggiungi">Aggiungi</button>
       </section>
 
+      <!-- SEZIONE LISTA -->
       <section id="contenitore-lista">
         <ul>
           <li v-for="(item,index) in lista">

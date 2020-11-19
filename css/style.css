@@ -1,3 +1,4 @@
+/* regole generali */
 *{
   padding: 0;
   margin: 0;
@@ -9,27 +10,44 @@ body{
   background-size: cover;
 }
 
+section{
+  padding: 40px;
+}
+
 #app{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* HEADER */
 #contenitore-logo img{
-
+  margin-top: 20px;
+  width: 450px;
   height: 100px;
-  width: 100px;
+  border-radius: 20px;
 }
 
-section{
-  padding: 40px;
-}
-
-#contenitore-lista{
-  padding-top : 20px;
+/* SEZIONE INPUT */
+#inputTodo{
   width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+#btn-aggiungi{
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  color: white;
+  background-color: #4040bb;
+}
+
+/* SEZIONE LISTA */
+#contenitore-lista{
+  width: 420px;
   display: flex;
-  justify-content: flex-start;
 }
 
 #contenitore-lista > ul{
@@ -41,14 +59,15 @@ section{
   list-style: none;
   display: flex;
   align-content: space-between;
+
 }
 
 #cont-item{
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 30px;
+  border-bottom: solid 1px grey;
 }
+
 
 .fa-times{
   color: red;

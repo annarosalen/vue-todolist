@@ -3,7 +3,7 @@
 var app= new Vue({
   el:"#app",
   data:{
-    logo:"img/logo-piccolo.png",
+    logo:"img/logo-grande.png",
     todo:"",
     lista:[
     ]
@@ -21,7 +21,17 @@ var app= new Vue({
     enterTodo: function(){
       this.lista.push(this.todo);
       this.todo = "";
-    }
+    },
 
-  }
+
+  },
+
+  //DA RIVEDERE
+  // directives: {
+  //       "todo-focus": function(el, binding) {
+  //         if (binding.value) {
+  //           el.focus();
+  //         }
+  //       }
+  //     }
 });
