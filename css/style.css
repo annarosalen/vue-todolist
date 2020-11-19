@@ -57,18 +57,26 @@ section{
 #contenitore-lista > ul > li{
   padding-top: 10px;
   list-style: none;
-  display: flex;
-  align-content: space-between;
-
 }
 
 #cont-item{
   width: 100%;
   height: 30px;
   border-bottom: solid 1px grey;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
 
+#cont-item .todo{
+  font-weight: bold;
+  font-size: 20px;
+}
 
 .fa-times{
   color: red;
+}
+
+.done{
+  text-decoration:line-through;
 }

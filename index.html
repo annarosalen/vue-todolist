@@ -20,7 +20,7 @@
 
       <!-- SEZIONE INPUT -->
       <section>
-          <input id="inputTodo" type="text" v-model="todo" placeholder="Add New Todo" @keypress.enter="enterTodo">
+          <input id="inputTodo" type="text" v-model="newtodo" placeholder="Add New Todo" @keypress.enter="enterTodo">
           <button id="btn-aggiungi" type="button" name="button" @click="aggiungi">Aggiungi</button>
       </section>
 
@@ -29,8 +29,8 @@
         <ul>
           <li v-for="(item,index) in lista">
             <div id="cont-item">
-              <input  type="checkbox"/>
-              <label> {{item}} </label>
+              <input type="checkbox" @click="toggleDone"/>
+              <label class="todo" :class= "{done: check}"> {{item}} </label>
               <a href="#"> <i class="fa fa-times" @click="rimuovi(item)"></i> </a>
             </div>
           </li>

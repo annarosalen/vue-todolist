@@ -4,14 +4,15 @@ var app= new Vue({
   el:"#app",
   data:{
     logo:"img/logo-grande.png",
-    todo:"",
+    newtodo:"",
     lista:[
-    ]
+    ],
+    check: ""
   },
   methods: {
     aggiungi: function () {
-      this.lista.push(this.todo);
-      this.todo = "";
+      this.lista.push(this.newtodo);
+      this.newtodo = "";
     },
 
     rimuovi: function(item){
@@ -19,10 +20,18 @@ var app= new Vue({
     },
 
     enterTodo: function(){
-      this.lista.push(this.todo);
-      this.todo = "";
+      this.lista.push(this.newtodo);
+      this.newtodo = "";
     },
 
+    toggleDone: function(item){
+      this.check  = !item.check;
+      // if (this.check==="done") {
+      //   this.check = "";
+      // }else{
+      //   this.check="done";
+      // }
+    }
 
   },
 
