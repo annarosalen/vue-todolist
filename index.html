@@ -11,18 +11,18 @@
 
     <div id="app">
 
-      <nav>
+      <header>
         <div id="contenitore-logo">
           <img :src="logo" alt="">
         </div>
-      </nav>
+      </header>
 
       <section>
-          <input type="text" v-model="todo">
+          <input type="text" v-model="todo" placeholder="Add New Todo" @keypress.enter="enterTodo">
           <button type="button" name="button" @click="aggiungi">Aggiungi</button>
       </section>
 
-      <div id="contenitore-lista">
+      <section id="contenitore-lista">
         <ul>
           <li v-for="(item,index) in lista">
             <div id="cont-item">
@@ -32,7 +32,7 @@
             </div>
           </li>
         </ul>
-      </div>
+      </section>
 
     </div>
 

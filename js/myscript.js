@@ -11,10 +11,16 @@ var app= new Vue({
   methods: {
     aggiungi: function () {
       this.lista.push(this.todo);
+      this.todo = "";
     },
 
     rimuovi: function(item){
       this.lista.splice(this.lista.indexOf(item),1);
+    },
+
+    enterTodo: function(){
+      this.lista.push(this.todo);
+      this.todo = "";
     }
 
   }
