@@ -24,8 +24,8 @@ var app= new Vue({
       this.newtodo = "";
     },
 
-    toggleDone: function(item){
-      this.check  = !item.check;
+    toggleDone: function(){
+      this.check  = !this.check;
       // if (this.check==="done") {
       //   this.check = "";
       // }else{
