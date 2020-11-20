@@ -9,11 +9,10 @@ var app= new Vue({
     lista:[
 
     ],
-    check: false,
   },
   methods: {
     aggiungi: function () {
-      this.lista.push(this.newtodo);
+      this.lista.push({name: this.newtodo, check: false});
       this.newtodo = "";
 
     },
@@ -23,12 +22,12 @@ var app= new Vue({
     },
 
     enterTodo: function(){
-      this.lista.push(this.newtodo);
+      this.lista.push({name: this.newtodo, check: false});
       this.newtodo = "";
     },
 
     toggleDone: function(item){
-      this.check = !this.check;
+      item.check = !item.check;
       // if (this.check==="done") {
       //   this.check = "";
       // }else{

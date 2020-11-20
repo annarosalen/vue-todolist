@@ -30,8 +30,8 @@
         <ul>
           <li v-for="(item,index) in lista">
             <div id="cont-item">
-              <input id="checkDone" type="checkbox" @click="toggleDone(item)"/>
-              <label class="todo" :class= "{done: check}" v-bind:key="item.id"> {{item}} </label>
+              <input id="checkDone" type="checkbox" @change="toggleDone(item)" :checked="item.check"/>
+              <label class="todo" :class= "(item.check === true)? 'done': ''">  {{item.name}} </label>
               <a href="#"> <i class="fa fa-times" @click="rimuovi(item)"></i> </a>
             </div>
           </li>
